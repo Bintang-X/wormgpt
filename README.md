@@ -101,13 +101,7 @@ Setelah dijalanin, lo masuk ke menu utama dengan opsi:
 
 ---
 
-## 🛠️ Konfigurasi
 
-Ganti API endpoint di `wormgpt.py` kalau perlu:
-
-```python
-API_URL = "https://bintangapi.full.diskon.cloud/api/aichat/wormgpt/"
-```
 
 > API ini ditenagai **BintangAPI** — gratis, langsung bisa dipake.
 
