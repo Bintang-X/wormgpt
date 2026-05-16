@@ -1,80 +1,136 @@
-
-```markdown
-# 🐛 WormGPT — AI Terminal Interface
-> **Next-Gen Cyberpunk CLI Interface Powered by BintangAPI**
-
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.x-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-![API](https://img.shields.io/badge/BintangAPI-v4-E11D48?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Active-059669?style=for-the-badge)
+<img src="https://bintangapi.full.diskon.cloud/logo/wormgpt.jpg" alt="WormGPT by Bintang" width="100%"/>
 
-<p align="center">
-  <a href="#-fitur-utama">Fitur Utama</a> •
-  <a href="#-instalasi">Instalasi</a> •
-  <a href="#-cara-penggunaan">Cara Pakai</a> •
-  <a href="#-arsitektur-sesi">Sistem Sesi</a>
-</p>
+# 🐛 WORMGPT BY BINTANG
+### *AI Terminal Interface — Powered by BintangAPI*
 
----
+[![Python](https://img.shields.io/badge/Python-3.8+-dc143c?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-8b0000?style=for-the-badge)](LICENSE)
+[![BintangAPI](https://img.shields.io/badge/Powered_by-BintangAPI-ff1a1a?style=for-the-badge&logoColor=white)](https://bintangapi.full.diskon.cloud)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Android-b22222?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/Bintang-X/wormgpt)
+
+> **Chat AI langsung dari terminal. No browser. No GUI. Pure terminal vibes.** 🔥
 
 </div>
 
-## 🌌 Tentang Project
+---
 
-**WormGPT AI Terminal Interface** adalah aplikasi berbasis CLI (Command Line Interface) yang dirancang untuk memberikan pengalaman berinteraksi dengan AI secara radikal. Mengusung estetika *dark-mode terminal*, program ini tidak hanya fungsional tetapi juga memanjakan mata dengan layout box-drawing yang presisi dan animasi fluid.
+## ✨ Fitur
+
+| Fitur | Keterangan |
+|-------|-----------|
+| 🤖 **AI Chat** | Chat dengan WormGPT powered by BintangAPI |
+| 💬 **Multi Chat** | Kelola beberapa sesi chat sekaligus |
+| 🔀 **Switch Chat** | Pindah antar chat dengan mudah |
+| 🆕 **New Chat** | Buat chat baru kapan aja |
+| 🔄 **Reset Session** | Reset semua chat dalam satu klik |
+| ⚡ **Auto Retry** | Auto reconnect kalau koneksi putus (3x percobaan) |
+| 🎨 **Red Terminal UI** | UI merah khas Bintang Tools yang goks |
+| 💻 **Code Highlighting** | Code block langsung di-render rapi di terminal |
+| ⌨️ **Typewriter Effect** | Response AI ditampilkan kayak diketik live |
+| 📊 **Status Bar** | Info chat ID, jumlah pesan, status API realtime |
 
 ---
 
-## ✨ Fitur Utama
+## ⚙️ Requirements
 
-| Fitur | Deskripsi | Estetika |
-| :--- | :--- | :--- |
-| **🖥️ Premium UI** | Render otomatis menggunakan *ANSI Colors* tingkat tinggi dan structural *box-drawing*. | `Cyberpunk Red` |
-| **💬 Session Manager** | Mendukung multi-chat dinamis. Pindah sesi, hapus riwayat, atau lacak ID secara *real-time*. | `Smart Cache` |
-| **⏳ Fluid Animation** | Efek *typewriting* responsif dan *animated custom spinner* saat AI sedang berpikir. | `Smooth 0.08s` |
-| **🟢 Raw Code Block** | Output kode dipisahkan dengan separator khusus tanpa memotong indentasi asli (mudah di-copy). | `Syntax Ready` |
+- Python **3.8+**
+- Library `requests`
+- Terminal yang support **ANSI color** (Linux, macOS, Termux)
 
 ---
 
-## 🛠️ Instalasi
+## 🚀 Cara Install & Jalanin
 
-Cukup jalankan beberapa baris perintah ini di terminalmu:
+**1. Clone repo**
 
 ```bash
-# 1. Clone repositori ke lokal
-git clone [https://github.com/USERNAME_GITHUB_KAMU/wormgpt-cli.git](https://github.com/USERNAME_GITHUB_KAMU/wormgpt-cli.git)
+git clone https://github.com/Bintang-X/wormgpt.git
+cd wormgpt
+```
 
-# 2. Masuk ke direktori project
-cd wormgpt-cli
+**2. Install dependency**
 
-# 3. Install dependency utama
+```bash
 pip install requests
-
 ```
-## 🎮 Cara Penggunaan
-Jalankan script utama dengan perintah berikut:
+
+**3. Jalanin!**
+
 ```bash
-python3 main.py
+python wormgpt.py
+```
+
+---
+
+## 📱 Termux (Android)
+
+Bisa jalan di Termux tanpa root!
+
+```bash
+pkg update && pkg upgrade
+pkg install python git
+pip install requests
+git clone https://github.com/Bintang-X/wormgpt.git
+cd wormgpt
+python wormgpt.py
+```
+
+---
+
+## 🎮 Cara Pakai
+
+Setelah dijalanin, lo masuk ke menu utama dengan opsi:
+
+1. 💬 **Lanjut Chat** — lanjut sesi yang lagi aktif
+2. 🆕 **New Chat** — buat sesi chat baru
+3. 🔀 **Switch Chat** — pilih dari daftar chat yang ada
+4. 📊 **Info Session** — lihat info session & semua chat
+5. 🔄 **Reset Semua Chat** — hapus semua sesi
+6. 🧹 **Clear Layar** — bersihkan terminal
+7. 🚪 **Keluar**
+
+**Command cepat saat chat:**
+
+| Command | Fungsi |
+|---------|--------|
+| `menu` / `help` | Buka menu |
+| `clear` | Bersihkan layar |
+| `exit` / `quit` / `q` | Keluar |
+
+---
+
+## 🛠️ Konfigurasi
+
+Ganti API endpoint di `wormgpt.py` kalau perlu:
+
+```python
+API_URL = "https://bintangapi.full.diskon.cloud/api/aichat/wormgpt/"
+```
+
+> API ini ditenagai **BintangAPI** — gratis, langsung bisa dipake.
+
+---
+
+## 📁 Struktur File
 
 ```
-### ⌨️ Navigasi Perintah Internal
-Saat berada di dalam chat, kamu bisa mengetikkan perintah khusus ini di prompt:
- * menu atau help — Membuka **Panel Kendali Utama** (Ubah sesi, cek memori, reset).
- * clear — Membersihkan layar terminal dan merender ulang logo utama.
- * exit atau quit — Menutup sesi terminal secara aman.
-## 📊 Panel Arsitektur Sesi
-Aplikasi ini dilengkapi dengan penjejak otomatis yang terhubung ke server pusat:
+wormgpt/
+├── wormgpt.py     # Single file, langsung jalan
+└── README.md
 ```
- ╔════ [ PANEL INFORMASI ] ════════════════════════════════════════╗
- ║  Chat ID    : chat_xxxxxx (Dinamis)                             ║
- ║  Memory ID  : Terenkripsi via BintangAPI                        ║
- ║  Interface  : Python Terminal Interactive Engine                ║
- ╚═════════════════════════════════════════════════════════════════╝
 
-```
-## 👨‍💻 Developer & Framework
-Project ini dikembangkan sepenuhnya oleh **Bintang** dan berjalan di bawah payung **BintangGPT Development Framework**.
+---
+
 <div align="center">
-**[ BINTANGTOOLS ECOSYSTEM © 2026 ]**
+
+## 👤 Author
+
+**Bintang** — [@Bintang-X](https://github.com/Bintang-X)
+
+*Part of the [Bintang Tools](https://bintangtools.diskon.cloud) ecosystem*
+
+*Made with ❤️ & 🔴 by Bintang*
+
 </div>
